@@ -8,8 +8,12 @@ Add the SavePlayModeChanges component to the root of any hierarchies you'd like 
 
 ## Method
 
-Unlike other tools (such as PlayModePersist), this approximates the common trick of copy/pasting gameobjects from play mode to edit mode. We couldn't find a way to do this exactly as Unity does, so it serializes and deserializes gameobject hierarchies manually, mostly using UnityEngine.JSONUtility.
+Unlike other tools (such as PlayModePersist), this approximates the common trick of copy/pasting gameobjects from play mode to edit mode. 
+
+We couldn't find a way to do this exactly as Unity does, so it serializes and deserializes gameobject hierarchies manually, mostly using UnityEngine.JSONUtility.
+
 It's more of a hammer than a scalpel, but despite its drawbacks it can be a huge time saver so we're releasing it for anyone to use and improve.
+**This tool is experimental. If something goes wrong, backups of your scenes are saved to a Backups folder on your desktop.**
 
 ### Advantages
 
