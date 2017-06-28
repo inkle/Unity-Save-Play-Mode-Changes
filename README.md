@@ -31,6 +31,7 @@ It's a brute force sort of solution. This means:
 - Breaks prefab connections
 - Deselects and closes a previously selected and expanded hierarchy (not investigated)
 - Can't save anything marked static, since static meshes are combined and don’t have asset files
+- We've not found one in a while, but some components may not save properly
 
 ## How it works
 
@@ -41,3 +42,7 @@ The SavePlayModeChangesChecker class finds all references to SavePlayModeChanges
 - Undoing restored changes can break object references
 - Small wait time when exiting play mode if something requires restoring
 - Only scenes that are open in edit mode can be restored, and changing scenes in game will prevent the unloaded scenes being saved
+
+## License
+
+SavePlayModeChanges is released under the MIT license. Although we don't require attribution, we'd love to hear feedback, and Twitter follows ([@inklestudios](https://twitter.com/inklestudios)) are always appreciated!
