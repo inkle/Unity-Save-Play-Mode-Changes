@@ -298,7 +298,7 @@ namespace PlayModeSaver {
 
 			GameObject RestoreGameObject (SerializedGameObject serializedGameObject) {
 				GameObject gameObject = new GameObject();
-				Undo.RegisterCreatedObjectUndo (gameObject, "Creat");
+				Undo.RegisterCreatedObjectUndo (gameObject, "Create");
 
 				deserializedObjects.Add(gameObject);
 				deserializedGameObjects.Add(new DeserializedGameObject(serializedGameObject, gameObject));
@@ -324,7 +324,7 @@ namespace PlayModeSaver {
 				Debug.Assert(type != null, "Type '"+serializedComponent.typeName+"' not found in assembly '"+serializedComponent.assemblyName+"'");
 
 				if (type == typeof(Transform)) component = go.transform;
-				else component = go.AddComponent(type);
+				else component = Undo.AddComponent(go, type);
 
 //				bool restore = true;
 //				if(restore) {
