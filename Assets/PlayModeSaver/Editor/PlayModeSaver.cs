@@ -359,6 +359,7 @@ namespace PlayModeSaver {
 					if(deserializedGameObject.gameObject.transform.parent == null && deserializedGameObject.serializedGameObject.hasParent) {
 						UnityEngine.Object o = EditorUtility.InstanceIDToObject(deserializedGameObject.serializedGameObject.parentID);
 						if(o == null || (Transform)o == null) return;
+						// Note that this ought to use Undo.SetTransformParent, but you can't currently set worldPositionStays using it.
 						deserializedGameObject.gameObject.transform.SetParent((Transform)o, false);
 					}
 					deserializedGameObject.gameObject.transform.SetSiblingIndex(deserializedGameObject.serializedGameObject.siblingIndex);
