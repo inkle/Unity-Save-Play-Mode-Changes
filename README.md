@@ -1,6 +1,6 @@
 # Save Play Mode Changes in Unity
 
-Unity tool allowing changes made in play mode to be restored upon stopping the game.
+Unity tool allowing changes made in play mode to be restored upon returning to edit mode.
 
 ## Usage
 
